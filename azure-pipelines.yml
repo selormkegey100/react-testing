@@ -21,9 +21,5 @@ steps:
     versionSpec: $(node_version)
 
 - script: npm install
-
-- script: |
-    npm pack
-  displayName: 'Package for npm release'
   
 - script: npm test

@@ -21,3 +21,16 @@ steps:
     versionSpec: $(node_version)
 
 - script: npm install
+
+- task: PublishCodeCoverageResults@1
+  inputs:
+    codeCoverageTool: 'Cobertura'
+    summaryFileLocation: 'coverage-cobertura-coverage.xml'
+    
+- task: PublishTestResults@2
+  inputs:
+    testResultsFormat: 'JUnit'
+    testResultsFiles: '**/TEST-*.xml'
+
+
+

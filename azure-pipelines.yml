@@ -21,5 +21,3 @@ steps:
     versionSpec: $(node_version)
 
 - script: npm install
-  
-- script: npm run test
